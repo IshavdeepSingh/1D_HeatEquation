@@ -29,6 +29,14 @@ u = np.zeroes(nodes) + 20 # we keep the plate initially at 20 degrees
 u[0] = 100 #starting end of the rod
 u[-1] = 100 #ending end of the rod
 
+# Visualizing with a plot
+
+fig, axis = plt.subplots()
+
+pcm = axis.pcolormesh([u], cmap=plt.cm.jet, vmin=0, vmax=100)
+plt.colorbar(pcm, ax=axis)
+axis.set_ylim([-2, 3])
+
 #Simulating
 counter = 0
 
