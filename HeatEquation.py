@@ -15,7 +15,7 @@ time = 4 #seconds time taken for
 nodes = 10
 
 # initialization 
-dx = lenth / nodes #spatial discrete element basically the disance between the nodes
+dx = length / nodes #spatial discrete element basically the disance between the nodes
 dt = 0.5 * dx**2 / a # derived from the stability analysis of the finite difference scheme ensuring the numerical solution remains stable
 t_nodes = int(time/dt) 
 
