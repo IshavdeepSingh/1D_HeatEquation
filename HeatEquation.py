@@ -19,9 +19,12 @@ dx = lenth / nodes #spatial discrete element basically the disance between the n
 dt = 0.5 * dx**2 / a # derived from the stability analysis of the finite difference scheme ensuring the numerical solution remains stable
 t_nodes = int(time/dt) 
 
-# the temperature at the ends of the rod must be known at any time 
 #distribution before starting the simulation must also be known 
 
 u = np.zeroes(nodes) + 20 # we keep the plate initially at 20 degrees 
 
+#Boundary conditions 
+# the temperature at the ends of the rod must be known at any time 
 
+u[0] = 100 #starting end of the rod
+u[-1] = 100 #ending end of the rod
