@@ -3,7 +3,6 @@
 
 # In[ ]:
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -21,7 +20,7 @@ t_nodes = int(time/dt)
 
 #distribution before starting the simulation must also be known 
 
-u = np.zeroes(nodes) + 20 # we keep the plate initially at 20 degrees 
+u = np.zeros(nodes) + 20 # we keep the plate initially at 20 degrees 
 
 #Boundary conditions 
 # the temperature at the ends of the rod must be known at any time 
