@@ -28,3 +28,18 @@ u = np.zeroes(nodes) + 20 # we keep the plate initially at 20 degrees
 
 u[0] = 100 #starting end of the rod
 u[-1] = 100 #ending end of the rod
+
+#Simulating
+counter = 0
+
+while counter < time :
+
+    w = u.copy()
+
+    for i in range(1, nodes - 1):
+
+        u[i] = dt * a * (w[i - 1] - 2 * w[i] + w[i + 1]) / dx ** 2 + w[i]
+
+    counter += dt
+
+    print("t: {:.3f} [s], Average temperature: {:.2f} Celcius".format(counter, np.average(u)))
